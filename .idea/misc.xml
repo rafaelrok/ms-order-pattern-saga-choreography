@@ -5,8 +5,9 @@
     <file type="web" url="file://$PROJECT_DIR$/inventory-service" />
     <file type="web" url="file://$PROJECT_DIR$/order-service" />
     <file type="web" url="file://$PROJECT_DIR$/payment-service" />
+    <file type="web" url="file://$PROJECT_DIR$/product-service" />
   </component>
-  <component name="ProjectRootManager">
+  <component name="ProjectRootManager" version="2" project-jdk-name="corretto-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="ProjectType">
