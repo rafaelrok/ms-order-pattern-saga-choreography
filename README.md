@@ -88,14 +88,12 @@ Em resumo, representa uma implementação robusta e altamente técnica de um sis
 * **Gradle**
 
 # Arquitetura Proposta
-
-[Voltar ao início](#sum%C3%A1rio)
+Imagem modelo de uma padrão SAGA <a href="https://microservices.io/patterns/data/saga.html"> fonte </a> :
+![Arquitetura](resources/Coreografada.png)
 
 Nesse projeto desenvolvi a seguinte aquitetura:
 
-![Arquitetura](resources/Coreografada.png)
-
-Arquitetura contem teremos 5 serviços:
+Arquitetura contem teremos 4 serviços:
 
 * **Order-Service**: microsserviço responsável apenas por gerar um pedido inicial, e receber uma notificação. Aqui que teremos endpoints REST para inciar o processo e recuperar os dados dos eventos. O banco de dados utilizado será o MongoDB.
 * **Product-Service**: microsserviço responsável por validar se o produto informado no pedido existe e está válido. Este microsserviço guardará a validação de um produto para o ID de um pedido. O banco de dados utilizado será o PostgreSQL.
