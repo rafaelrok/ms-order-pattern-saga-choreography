@@ -1,4 +1,4 @@
-# <p align="center">ms-order-pattern-saga-coreografado
+# <p align="center">ms-order-pattern-saga-choreography
 
 <p align="center">
      <img alt="GitHub language count" src="https://img.shields.io/github/commit-activity/w/rafaelrok/ms-order-pattern-saga-coreografado">
@@ -23,7 +23,7 @@
 ![Arquitetura](resources/Design%20Pattern%20Saga.gif)
 
 > O projeto é um sistema de microservices desenvolvido em Java com Spring Boot, com objetivo de gerir ordens de serviços e manipulação de estoque de forma distribuída. Uma abordagem central nesse projeto é a aplicação do ‘design’ pattern Saga e a utilização do Apache Kafka como meio de comunicação entre os microservices.
-Nesse caso utilizando a saga `Coreografada` é uma forma de implementar transações distribuídas longas que abrangem múltiplos microservices.
+Nesse caso utilizando a saga `Choreography` é uma forma de implementar transações distribuídas longas que abrangem múltiplos microservices.
 Ao contrário da Saga Orquestrada, onde há um coordenador central que gerencia o fluxo, na Saga Coreografada cada serviço executa uma parte da transação e sabe exatamente o que o próximo serviço deve fazer.
 O fluxo é coreografado, com cada serviço executando uma etapa e publicando um evento sobre o resultado dessa etapa. O próximo serviço assina esse evento e executa a próxima etapa.
 
@@ -36,7 +36,7 @@ Cada serviço executa uma etapa e comunica o resultado via eventos assíncronos.
 
 >**Arquitetura de Microservices:** O sistema é composto por vários microservices que desempenham funções específicas, como a criação de ordens de serviço, o processamento de pagamentos, a atualização do estoque e assim por diante. Cada microservice é responsável por uma parte do processo, permitindo escalabilidade e flexibilidade.
 
->**‘Design’ Pattern Saga Coreografado:** O padrão Saga é aplicado para garantir a consistência e atomicidade das transações distribuídas. Quando uma ordem de serviço é criada, por exemplo, uma sequência de etapas é acionada, e em caso de erro em qualquer uma dessas etapas, é possível reverter ou compensar as ações já realizadas, mantendo o sistema num estado consistente.
+>**‘Design’ Pattern Saga Choreography:** O padrão Saga é aplicado para garantir a consistência e atomicidade das transações distribuídas. Quando uma ordem de serviço é criada, por exemplo, uma sequência de etapas é acionada, e em caso de erro em qualquer uma dessas etapas, é possível reverter ou compensar as ações já realizadas, mantendo o sistema num estado consistente.
 
 >**Kafka como Middleware:** O Apache Kafka é utilizado como um middleware de mensagens para facilitar a comunicação assíncrona entre os microservices. Ele permite que os eventos sejam publicados e consumidos de forma confiável, garantindo que as mensagens sejam entregues aos consumidores, mesmo em cenários de alta carga.
 
