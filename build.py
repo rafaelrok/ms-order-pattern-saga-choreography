@@ -23,9 +23,7 @@ def build_all_applications():
     threading.Thread(target=build_application,
                      args={"order-service"}).start()
     threading.Thread(target=build_application,
-                     args={"orchestrator-service"}).start()
-    threading.Thread(target=build_application,
-                     args={"product-validation-service"}).start()
+                     args={"product-service"}).start()
     threading.Thread(target=build_application,
                      args={"payment-service"}).start()
     threading.Thread(target=build_application,

@@ -4,7 +4,7 @@ plugins {
 	id 'java'
 }
 
-group = 'br.com.microservices.orchestrated'
+group = 'br.com.microservices.choreography'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
 
