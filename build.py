@@ -14,7 +14,7 @@ def build_application(app):
 
 def docker_compose_up():
     print("Running containers!")
-    os.popen("docker-compose up --build -d").read()
+    os.popen("docker-compose up --build -d order-db product-db payment-db inventory-db kafka redpanda-console").read()
     print("Pipeline finished!")
 
 
@@ -32,7 +32,7 @@ def build_all_applications():
 
 def remove_remaining_containers():
     print("Removing all containers.")
-    os.system("docker-compose down")
+    os.system("docker-compose down order-db product-db payment-db inventory-db kafka redpanda-console")
     containers = os.popen('docker ps -aq').read().split('\n')
     containers.remove('')
     if len(containers) > 0:
